@@ -1,0 +1,1660 @@
+#base "turbo_items_game.txt"
+
+"turbo_items_game"
+{
+	"items"
+	{
+		"default"
+		{
+			"name"						"default"
+			"hidden"					"1"
+			"item_class"				"tf_wearable"
+			"item_name"					"#TF_Default_ItemDef"
+			"item_slot"					"melee"
+			"item_quality"				"normal"
+			"min_ilevel"				"1"
+			"max_ilevel"				"1"
+		}
+		"0"
+		{
+			"name"						"TF_WEAPON_BAT"
+			"prefab"					"weapon_bat"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Bat_Desc"
+			"model_world"				"models/weapons/w_models/w_bat.mdl"
+			"model_player"				"models/weapons/v_models/v_bat_scout.mdl"
+			"attach_to_hands"			"2"
+		}
+		"1"
+		{
+			"name"						"TF_WEAPON_BOTTLE"
+			"prefab"					"weapon_bottle"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Bottle_Desc"
+			"model_world"				"models/weapons/w_models/w_bottle.mdl"
+			"model_player"				"models/weapons/v_models/v_bottle_demoman.mdl"
+			"attach_to_hands"			"2"
+		}
+		"2"
+		{
+			"name"						"TF_WEAPON_FIREAXE"
+			"prefab"					"weapon_fireaxe"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_FireAxe_Desc"
+			"model_world"				"models/weapons/w_models/w_fireaxe.mdl"
+			"model_player"				"models/weapons/v_models/v_fireaxe_pyro.mdl"
+			"attach_to_hands"			"2"
+		}
+		"3"
+		{
+			"name"						"TF_WEAPON_CLUB"
+			"prefab"					"weapon_club"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Club_Desc"
+			"model_world"				"models/weapons/w_models/w_machete.mdl"
+			"model_player"				"models/weapons/v_models/v_machete_sniper.mdl"
+			"attach_to_hands"			"2"
+		}
+		"4"
+		{
+			"name"						"TF_WEAPON_KNIFE"
+			"prefab"					"weapon_knife"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Knife_Desc"
+			"model_world"				"models/weapons/w_models/w_knife.mdl"
+			"model_player"				"models/weapons/v_models/v_knife_spy.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value"				"1"
+				}
+			}
+		}
+		"5"
+		{
+			"name"						"TF_WEAPON_FISTS"
+			"prefab"					"weapon_fists"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Fists_Desc"
+			"model_player"				"models/weapons/v_models/v_fist_heavy.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value"				"1"
+				}
+			}
+		}
+		"6"
+		{
+			"name"						"TF_WEAPON_SHOVEL"
+			"prefab"					"weapon_shovel"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Shovel_Desc"
+			"model_world"				"models/weapons/w_models/w_shovel.mdl"
+			"model_player"				"models/weapons/v_models/v_shovel_soldier.mdl"
+			"attach_to_hands"			"2"
+		}
+		"7"
+		{
+			"name"						"TF_WEAPON_WRENCH"
+			"prefab"					"weapon_wrench"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Wrench_Desc"
+			"model_world"				"models/weapons/w_models/w_wrench.mdl"
+			"model_player"				"models/weapons/v_models/v_wrench_engineer.mdl"
+			"attach_to_hands"			"2"
+		}
+		"8"
+		{
+			"name"						"TF_WEAPON_BONESAW"
+			"prefab"					"weapon_bonesaw"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Bonesaw_Desc"
+			"model_world"				"models/weapons/w_models/w_bonesaw.mdl"
+			"model_player"				"models/weapons/v_models/v_bonesaw_medic.mdl"
+			"attach_to_hands"			"2"
+		}
+		"9"
+		{
+			"name"						"TF_WEAPON_SHOTGUN_PRIMARY"
+			"prefab"					"weapon_shotgun"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Shotgun_Primary_Desc"
+			"item_slot"					"primary"
+			"model_world"				"models/weapons/w_models/w_shotgun.mdl"
+			"model_player"				"models/weapons/v_models/v_shotgun_engineer.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"engineer"				"1"
+			}
+		}
+		"10"
+		{
+			"name"						"TF_WEAPON_SHOTGUN_SOLDIER"
+			"prefab"					"weapon_shotgun"
+			"baseitem"					"1"
+			"hidden"					"1"
+			"item_description"			"#TF_Weapon_Shotgun_Soldier_Desc"
+			"item_slot"					"secondary"
+			"model_world"				"models/weapons/w_models/w_shotgun.mdl"
+			"model_player"				"models/weapons/v_models/v_shotgun_soldier.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"soldier"				"1"
+			}
+		}
+		"11"
+		{
+			"name"						"TF_WEAPON_SHOTGUN_HWG"
+			"prefab"					"weapon_shotgun"
+			"baseitem"					"1"
+			"hidden"					"1"
+			"item_description"			"#TF_Weapon_Shotgun_HWG_Desc"
+			"item_slot"					"secondary"
+			"model_world"				"models/weapons/w_models/w_shotgun.mdl"
+			"model_player"				"models/weapons/v_models/v_shotgun_heavy.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"heavy"					"1"
+			}
+		}
+		"12"
+		{
+			"name"						"TF_WEAPON_SHOTGUN_PYRO"
+			"prefab"					"weapon_shotgun"
+			"baseitem"					"1"
+			"hidden"					"1"
+			"item_description"			"#TF_Weapon_Shotgun_Pyro_Desc"
+			"item_slot"					"secondary"
+			"model_world"				"models/weapons/w_models/w_shotgun.mdl"
+			"model_player"				"models/weapons/v_models/v_shotgun_pyro.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"pyro"					"1"
+			}
+			"attributes"
+			{
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value"				"1"
+				}
+			}
+		}
+		"13"
+		{
+			"name"						"TF_WEAPON_SCATTERGUN"
+			"prefab"					"weapon_scattergun"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Scattergun_Desc"
+			"model_world"				"models/weapons/w_models/w_scattergun.mdl"
+			"model_player"				"models/weapons/v_models/v_scattergun_scout.mdl"
+			"attach_to_hands"			"2"
+		}
+		"14"
+		{
+			"name"						"TF_WEAPON_SNIPERRIFLE"
+			"prefab"					"weapon_sniperrifle"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_SniperRifle_Desc"
+			"model_world"				"models/weapons/w_models/w_sniperrifle.mdl"
+			"model_player"				"models/weapons/v_models/v_sniperrifle_sniper.mdl"
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"mod sniper zoom while jumping"	"1"
+				"zoom speed mod disabled"	"1"
+				"hidden separator"		"1"
+				"can headshot"			"1"
+				"aiming movespeed increased"	"3.75"
+			}
+		}
+		"15"
+		{
+			"name"						"TF_WEAPON_MINIGUN"
+			"prefab"					"weapon_minigun"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Minigun_Desc"
+			"model_world"				"models/weapons/w_models/w_minigun.mdl"
+			"model_player"				"models/weapons/v_models/v_minigun_heavy.mdl"
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"minigun jump while revved"		"1"
+			}
+		}
+		"16"
+		{
+			"name"						"TF_WEAPON_SMG"
+			"prefab"					"weapon_smg"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_SMG_Desc"
+			"model_world"				"models/weapons/w_models/w_smg.mdl"
+			"model_player"				"models/weapons/v_models/v_smg_sniper.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"no damage falloff over distance"
+				{
+					"attribute_class"	"mod_no_dmg_falloff"
+					"value"				"1"
+				}
+			}
+		}
+		"17"
+		{
+			"name"						"TF_WEAPON_SYRINGEGUN_MEDIC"
+			"prefab"					"weapon_syringegun"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_SyringeGun_Desc"
+			"model_world"				"models/weapons/w_models/w_syringegun.mdl"
+			"model_player"				"models/weapons/v_models/v_syringegun_medic.mdl"
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"Projectile speed increased"		"1.5"
+				"no damage falloff over distance"	"1"
+				"weapon spread bonus"				"0"
+			}
+		}
+		"18"
+		{
+			"name"						"TF_WEAPON_ROCKETLAUNCHER"
+			"prefab"					"weapon_rocketlauncher"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_RocketLauncher_Desc"
+			"model_world"				"models/weapons/w_models/w_rocketlauncher.mdl"
+			"model_player"				"models/weapons/v_models/v_rocketlauncher_soldier.mdl"
+			"attach_to_hands"			"2"
+		}
+		"19"
+		{
+			"name"						"TF_WEAPON_GRENADELAUNCHER"
+			"prefab"					"weapon_grenade_launcher"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_GrenadeLauncher_Desc"
+			"model_world"				"models/weapons/w_models/w_grenadelauncher.mdl"
+			"model_player"				"models/weapons/v_models/v_grenadelauncher_demo.mdl"
+			"attach_to_hands"			"2"
+		}
+		"20"
+		{
+			"name"						"TF_WEAPON_PIPEBOMBLAUNCHER"
+			"prefab"					"weapon_stickybomb_launcher"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_PipebombLauncher_Desc"
+			"model_world"				"models/weapons/w_models/w_stickybomb_launcher.mdl"
+			"model_player"				"models/weapons/v_models/v_stickybomb_launcher_demo.mdl"
+			"attach_to_hands"			"2"
+		}
+		"21"
+		{
+			"name"						"TF_WEAPON_FLAMETHROWER"
+			"prefab"					"weapon_flamethrower"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_FlameThrower_Desc"
+			"model_world"				"models/weapons/w_models/w_flamethrower.mdl"
+			"model_player"				"models/weapons/v_models/v_flamethrower_pyro.mdl"
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"apply self knockback airblast"		"280"
+				"blank"								"1"
+			}
+		}
+		"22"
+		{
+			"name"						"TF_WEAPON_PISTOL"
+			"prefab"					"weapon_pistol"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Pistol_Desc"
+			"model_world"				"models/weapons/w_models/w_pistol.mdl"
+			"model_player"				"models/weapons/v_models/v_pistol_engineer.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"engineer"				"1"
+			}
+		}
+		"23"
+		{
+			"name"						"TF_WEAPON_PISTOL_SCOUT"
+			"prefab"					"weapon_pistol"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Pistol_Scout_Desc"
+			"model_world"				"models/weapons/w_models/w_pistol.mdl"
+			"model_player"				"models/weapons/v_models/v_pistol_scout.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"scout"					"1"
+			}
+		}
+		"24"
+		{
+			"name"						"TF_WEAPON_REVOLVER"
+			"prefab"					"weapon_revolver"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Revolver_Desc"
+			"model_world"				"models/weapons/w_models/w_revolver.mdl"
+			"model_player"				"models/weapons/v_models/v_revolver_spy.mdl"
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"weapon spread bonus"				"0"
+			}
+		}
+		"25"
+		{
+			"name"						"TF_WEAPON_PDA_ENGINEER_BUILD"
+			"prefab"					"weapon_pda"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_PDA_Engineer_Builder_Desc"
+			"model_world"				"models/weapons/w_models/w_builder.mdl"
+			"model_player"				"models/weapons/v_models/v_builder_engineer.mdl"
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"mod building upgrade full metal only TURBO"	"1"
+				"blank"					"1"
+				"hidden separator"		"1"
+				"mod dispenser cost"	"0.7"
+			}
+		}
+		"26"
+		{
+			"name"						"TF_WEAPON_PDA_ENGINEER_DESTROY"
+			"prefab"					"weapon_pda_destroy"
+			"baseitem"					"1"
+			"model_world"				"models/weapons/w_models/w_pda_engineer.mdl"
+			"model_player"				"models/weapons/v_models/v_pda_engineer.mdl"
+			"attach_to_hands"			"2"
+		}
+		"27"
+		{
+			"name"						"TF_WEAPON_PDA_SPY"
+			"prefab"					"weapon_pda_spy"
+			"baseitem"					"1"
+		}
+		"28"
+		{
+			"name"						"TF_WEAPON_BUILDER"
+			"prefab"					"weapon_builder"
+			"baseitem"					"1"
+			"model_world"				"models/weapons/w_models/w_toolbox.mdl"
+			"model_player"				"models/weapons/v_models/v_wrench_engineer.mdl"
+			"attach_to_hands"			"2"
+		}
+		"29"
+		{
+			"name"						"TF_WEAPON_MEDIGUN"
+			"prefab"					"weapon_medigun"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Medigun_Desc"
+			"model_world"				"models/weapons/w_models/w_medigun.mdl"
+			"model_player"				"models/weapons/v_models/v_medigun_medic.mdl"
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"heal rate bonus"		"1.25"
+			}
+		}
+		"30"
+		{
+			"name"						"TF_WEAPON_INVIS"
+			"prefab"					"weapon_invis"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Watch_Desc"
+		}
+		"31"
+		{
+			"name"						"TF_WEAPON_BUILDER_SPY"
+			"prefab"					"weapon_sapper"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Spy_Sapper_Desc"
+			"model_world"				"models/weapons/w_models/w_sapper.mdl"
+			"model_player"				"models/weapons/v_models/v_sapper_spy.mdl"
+			"attach_to_hands"			"2"
+		}
+		"32" // First TF2Classic item
+		{
+			"name"						"TF_WEAPON_UMBRELLA"
+			"prefab"					"weapon_umbrella"
+			"baseitem"					"1"
+			"item_description"			"#TF_Weapon_Umbrella_Desc"
+		}
+		"33"
+		{
+			"name"						"The Kritzkrieg"
+			"prefab"					"valve weapon_medigun"
+			"show_in_armory"			"1"
+			"item_name"					"#TF_Unique_Achievement_Medigun1"
+			"item_description"			"#TF_Unique_Achievement_Medigun1_Desc"
+			"propername"				"1"
+			"equip_region"				"medigun_backpack"
+			"image_inventory"			"backpack/weapons/w_models/w_kritzkrieg"
+			"model_world"				"models/weapons/w_models/w_kritzkrieg.mdl"
+			"model_player"				"models/weapons/v_models/v_kritzkrieg_medic.mdl"
+			"extra_wearable" 			"models/player/items/kritzkrieg_backpack.mdl"
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"lunchbox adds minicrits"	"1"
+				"medigun charge is crit boost"	"1"
+				"heal rate bonus"		"1.25"
+				"ubercharge rate bonus"	"1.25"
+				"special taunt"			"1"
+			}
+			"visuals"
+			{
+				"player_bodygroups"
+				{
+					"medic_backpack"			"1"
+				}
+			}
+		}
+		"34"
+		{
+			"name"						"The Ubersaw"
+			"prefab"					"valve weapon_bonesaw"
+			"item_logname"				"ubersaw"
+			"item_iconname"				"ubersaw"
+			"show_in_armory"			"1"
+			"item_type_name"			"#TF_Weapon_Syringe"
+			"item_name"					"#TF_Unique_Achievement_Bonesaw1"
+			"item_description"			"#TF_Unique_Achievement_Bonesaw1_Desc"
+			"propername"				"1"
+			"image_inventory"			"backpack/weapons/w_models/w_syringe"
+			"model_world"				"models/weapons/w_models/w_syringe.mdl"
+			"model_player"				"models/weapons/v_models/v_syringe_medic.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"add uber charge on hit"
+				{
+					"attribute_class"	"add_onhit_ubercharge"
+					"value"				"0.34"
+				}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"				"-10"
+				}
+				"lunchbox adds minicrits"
+				{
+					"attribute_class"	"set_weapon_mode"
+					"value"				"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value"				"1"
+				}
+			}
+			"xifier_class_remap"		"ubersaw"
+			"mouse_pressed_sound"		"#ui/item_knife_small_pickup.wav"
+			"drop_sound"				"#ui/item_metal_weapon_drop.wav"
+		}
+		"35"
+		{
+			"name"						"The Flare Gun"
+			"prefab"					"valve weapon_flaregun"
+			"model_world"				"models/weapons/w_models/w_flaregun.mdl"
+			"model_player"				"models/weapons/v_models/v_flaregun_pyro.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"				"1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value"				"1"
+				}
+			}
+			"static_attrs"
+			{
+				"override mult deploy weapon time animation"	"1"
+				"single wep deploy time hidden"		"0.5"
+			}
+		}
+		"36"
+		{
+			"name"						"The Sandvich"
+			"prefab"					"valve weapon_sandvich"
+			"model_world"				"models/weapons/w_models/w_sandwich.mdl"
+			"model_player"				"models/weapons/v_models/v_sandwich_heavy.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value"				"1"
+				}
+				"cannot use stored crits hidden"
+				{
+					"attribute_class"	"cannot_use_stored_crits"
+					"value"				"1"
+				}
+			}
+		}
+		"37"
+		{
+			"name"						"The Huntsman"
+			"prefab"					"valve weapon_huntsman"
+			"item_description"			"#TF_Weapon_CompoundBow_Desc"
+			"model_world"				"models/weapons/w_models/w_bow.mdl"
+			"model_player"				"models/weapons/v_models/v_bow.mdl"
+			"attach_to_hands"			"2"
+			"flip_viewmodel"			"0"
+			"static_attrs"
+			{
+				"min_viewmodel_offset"			"10 4 -10"
+				"zoom speed mod disabled"	"1"
+				"hidden separator"		"1"
+				"aiming movespeed increased"	"1.875"
+			}
+			"attributes"
+			{
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value"				"1"
+				}
+			}
+		}
+		"38"
+		{
+			"name"						"The Gunboats"
+			"prefab"					"valve"
+			"show_in_armory"			"1"
+			"item_class"				"tf_wearable"
+			"item_name"					"#TF_Unique_Blast_Boots"
+			"item_description"			"#TF_Weapon_Gunboats_Desc"
+			"item_type_name"			"#TF_Wearable_Boots"
+			"item_slot"					"secondary"
+			"equip_region"				"feet"
+			"anim_slot"					"FORCE_NOT_USED"
+			"item_quality"				"normal"
+			"propername"				"1"
+			"image_inventory"			"backpack/weapons/c_models/c_rocketboots_soldier"
+			"model_player"				"models/weapons/c_models/c_rocketboots_soldier.mdl"
+			"used_by_classes"
+			{
+				"soldier"				"1"
+			}
+			"loadondemand"				"1"
+			"act_as_wearable"			"1"
+			"attributes"
+			{
+				"rocket jump damage reduction"
+				{
+					"attribute_class"	"rocket_jump_dmg_reduction"
+					"value"				"0.4"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"				"1"
+				}
+				"armor footsteps"
+				{
+					"attribute_class"	"mod_armor_footsteps"
+					"value"				"1"
+				}
+			}
+			"mouse_pressed_sound"		"#ui/item_metal_weapon_pickup.wav"
+			"drop_sound"				"#ui/item_metal_weapon_drop.wav"
+		}
+		"39"
+		{
+			"name"						"TF_WEAPON_NAILGUN"
+			"prefab"					"weapon_nailgun"
+			"item_description"			"#TF_Weapon_Nailgun_Desc"
+			"used_by_classes"
+			{
+				"scout"					"1"
+			}
+			"static_attrs"
+			{
+				"no damage falloff over distance"	"1"
+				"weapon spread bonus"				"0"
+			}
+		}
+		"40"
+		{
+			"name"						"The R.P.G."
+			"prefab"					"weapon_rocketlauncher"
+			"show_in_armory"			"1"
+			"item_name"					"#TF_Weapon_RocketLauncherBeta"
+			"item_description"			"#TF_Weapon_RocketLauncherBeta_Desc"
+			"propername"				"1"
+			"item_logname"				"rpg"
+			"item_iconname"				"rpg"
+			"image_inventory"			"backpack/weapons/w_models/w_rpg"
+			"model_world"				"models/weapons/w_models/w_rpg.mdl"
+			"model_player"				"models/weapons/v_models/v_rpg_soldier.mdl"
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"rocket gravity"			"0.65"
+				"mod mini-crit airborne"	"1"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.3"
+				}
+				"self dmg push force increased"				
+				{
+					"attribute_class"	"mult_dmgself_push_force"
+					"value" 			"1.15"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"0.25"
+				}
+				"no damage falloff over distance"
+				{
+					"attribute_class"	"mod_no_dmg_falloff"
+					"value"				"1"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_rocketbeta.mdl"
+				}
+				"rocket whistle"
+				{
+					"attribute_class"	"rocket_whistle"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_BetaRPG.Single"
+				"sound_burst"			"Weapon_BetaRPG.SingleCrit"
+			}
+			"mouse_pressed_sound"		"#ui/item_heavier_gun_pickup.wav"
+			"drop_sound"				"#ui/item_heavier_gun_drop.wav"
+		}
+		"41"
+		{
+			"name"						"The Hunting Revolver"
+			"prefab"					"weapon_sniperrifle"
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_hunterrifle"
+			"item_logname"				"hunterrifle"
+			"item_iconname"				"hunterrifle"
+			"item_name"					"#TF_Weapon_HunterRifle"
+			"item_type_name"			"#TF_Weapon_SniperRifle"
+			"item_description"			"#TF_Weapon_HunterRifle_Desc"
+			"image_inventory"			"backpack/weapons/w_models/w_revrifle"
+			"model_world"				"models/weapons/w_models/w_revrifle_sniper.mdl"
+			"model_player"				"models/weapons/v_models/v_revrifle_sniper.mdl"
+			"attach_to_hands"			"2"
+			"static_attrs"
+			{
+				"can headshot"			"1"
+				"damage bonus hidden"	"0.8"
+			}
+			"attributes"
+			{
+				"punch angle is constant"
+				{
+					"attribute_class"	"punch_angle_is_constant"
+					"value"				"1"
+				}
+				"max health additive bonus"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value"				"25"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.45"
+				}
+				"sniper no charge"
+				{
+					"attribute_class"	"unimplemented_mod_sniper_no_charge"
+					"value"				"1"
+				}
+				"longer damage falloff distance"
+				{
+					"attribute_class"	"mult_falloff_distance"
+					"value"				"2.0"
+				}
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_STAND_PRIMARY_DEPLOYED"		"ACT_MP_ATTACK_STAND_PRIMARY_DEPLOYED_ALT"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY_DEPLOYED"		"ACT_MP_ATTACK_CROUCH_PRIMARY_DEPLOYED_ALT"
+					"ACT_MP_ATTACK_SWIM_PRIMARY_DEPLOYED"		"ACT_MP_ATTACK_SWIM_PRIMARY_DEPLOYED_ALT"
+					
+					"ACT_MP_RELOAD_STAND_PRIMARY_DEPLOYED"		"ACT_MP_RELOAD_STAND_PRIMARY_DEPLOYED_ALT"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY_DEPLOYED"		"ACT_MP_RELOAD_CROUCH_PRIMARY_DEPLOYED_ALT"
+					"ACT_MP_RELOAD_SWIM_PRIMARY_DEPLOYED"		"ACT_MP_RELOAD_SWIM_PRIMARY_DEPLOYED_ALT"
+					
+					"ACT_MP_ATTACK_STAND_PRIMARY"				"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"				"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"				"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
+					
+					"ACT_MP_RELOAD_STAND_PRIMARY"				"ACT_MP_RELOAD_STAND_PRIMARY_ALT"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY"				"ACT_MP_RELOAD_CROUCH_PRIMARY_ALT"
+					"ACT_MP_RELOAD_SWIM_PRIMARY"				"ACT_MP_RELOAD_SWIM_PRIMARY_ALT"
+				}
+			}
+			"static_attrs"
+			{
+				"class select override vcd"		"class_select_revrifle"
+			}
+		}
+		"42"
+		{
+			"name"						"The Fishwhacker"
+			"prefab"					"weapon_club"
+			"show_in_armory"			"1"
+			"item_logname"				"fishwhacker"
+			"item_iconname"				"fishwhacker"
+			"item_type_name"			"#TF_Weapon_Fishwhacker_Type"
+			"item_name"					"#TF_Weapon_Fishwhacker"
+			"item_description"			"#TF_Weapon_Fishwhacker_Desc"
+			"propername"				"1"
+			"image_inventory"			"backpack/weapons/w_models/w_fishwhacker"
+			"model_world"				"models/weapons/w_models/w_fishwhacker.mdl"
+			"model_player"				"models/weapons/v_models/v_fishwhacker_sniper.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"bleeding duration"
+				{
+					"attribute_class"	"bleeding_duration"
+					"value"				"2"
+				}
+				"crit vs bleeding players"
+				{
+					"attribute_class"	"crit_vs_bleeding_players"
+					"value"				"1"
+				}
+				"mark self on miss"
+				{
+					"attribute_class"	"self_mark_for_death_on_miss"
+					"value"				"3.0"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+				"particle on melee hit"
+				{
+					"attribute_class"	"particle_on_melee_hit"
+					"value"				"impact_wood"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_Fishwhacker.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_Fishwhacker.HitWorld"
+			}
+			"mouse_pressed_sound"		"#ui/item_wood_pole_pickup.wav"
+			"drop_sound"				"#ui/item_wood_weapon_drop.wav"
+		}
+		"43"
+		{
+			"name"						"TF_WEAPON_TRANQ"
+			"prefab"					"weapon_tranq"
+			"attributes"
+			{
+				"Projectile speed increased hidden"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"1.2"
+				}	
+				"tranq on hit"
+				{
+					"attribute_class"	"mod_tranq_onhit"
+					"value"				"5.0"
+				}
+				"tranq on hit VISUAL ONLY PART 2"
+				{
+					"attribute_class"	"VISUALONLY"
+					"value"				"0"
+				}
+			}
+		}
+		"44"
+		{
+			"name"						"MIRV"
+			"prefab"					"weapon_stickybomb_launcher"
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_grenade_mirv"
+			"item_name"					"#TF_Weapon_Mirv"
+			"item_type_name"			"#TF_Weapon_Grenade"
+			"item_description"			"#TF_Weapon_Mirv_Desc"
+			"anim_slot"					"item2"
+			"propername"				"0"
+			"image_inventory"			"backpack/weapons/w_models/w_grenade_mirv_demo"
+			"model_world"				"models/weapons/w_models/w_grenade_mirv_demo.mdl"
+			"model_player"				"models/weapons/v_models/v_mirv_demo.mdl"
+			"attach_to_hands"			"2"
+			"extra_wearable"			"models/player/items/charge_pack.mdl"
+			"used_by_classes"
+			{
+				"demoman"				"1"
+			}
+			"static_attrs"
+			{
+				"blast dmg to self increased hidden"	"0.5"
+				"effect bar recharge rate increased"	"0.5"
+                "allowed in medieval mode"		"1"
+			}
+			"attributes"
+			{
+				"maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"1.5"
+				}
+				"single wep deploy time hidden"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"				"0.625"
+				}
+				"override mult deploy weapon time animation"
+				{
+					"attribute_class"	"override_mult_deploy_time_anim"
+					"value"				"1.0"
+				}
+				"mirv impact"
+				{
+					"attribute_class"  "mirv_impact"
+					"value"            "1"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value"				"1"
+				}
+			}
+			"mouse_pressed_sound"		"#ui/item_bag_fast_pickup.wav"
+			"drop_sound"				"#ui/item_bag_drop.wav"
+		}
+		"45"
+		{
+			"name"						"The Coilgun"
+			"prefab"					"weapon_pistol"
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_coilgun"
+			"item_type_name"			"#TF_Weapon_Coilgun"
+			"item_name"					"#TF_Weapon_Coilgun"
+			"item_description" 			"#TF_Weapon_Coilgun_Desc"
+			"propername"				"1"
+			"item_logname"				"coilgun"
+			"item_iconname"				"coilgun"
+			"image_inventory"			"backpack/weapons/w_models/w_coilgun"
+			"model_world"				"models/weapons/w_models/w_coilgun.mdl"
+			"model_player"				"models/weapons/v_models/v_coilgun.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"engineer"				"1"
+			}
+			"static_attrs"
+			{
+				"no self blast dmg"		"1"
+			}
+			"attributes"
+			{
+				"ragdolls become ash"
+				{
+					"attribute_class"	"ragdolls_become_ash"
+					"value"	"1"
+				}
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_MP_RELOAD_STAND_SECONDARY"				"ACT_MP_RELOAD_STAND_PRIMARY_ALT"
+					"ACT_MP_RELOAD_CROUCH_SECONDARY"				"ACT_MP_RELOAD_CROUCH_PRIMARY_ALT"
+					"ACT_MP_RELOAD_SWIM_SECONDARY"				"ACT_MP_RELOAD_SWIM_PRIMARY_ALT"
+				}
+			}
+			"mouse_pressed_sound"		"#ui/item_taser_gun_pickup.wav"
+			"drop_sound"				"#ui/item_light_gun_drop.wav"
+		}
+		"46"
+		{
+			"name"						"Mine Layer"
+			"prefab"					"weapon_stickybomb_launcher"
+			"show_in_armory"			"1"
+			"item_name"					"#TF_Weapon_MineLayer"
+			"item_description"			"#TF_Weapon_MineLayer_Desc"
+			"item_logname"				"proxymine"
+			"item_iconname"				"proxymine"
+			"item_type_name"			"#TF_Weapon_ProximityMineLauncher"
+			"propername"				"1"
+			"image_inventory"			"backpack/weapons/w_models/w_minelayer"
+			"model_world"				"models/weapons/w_models/w_minelayer.mdl"
+			"model_player"				"models/weapons/v_models/v_minelayer_demo.mdl"
+			"attach_to_hands"			"2"
+			"attributes"
+			{
+				"proximity mines"
+				{
+					"attribute_class"	"mod_sticky_is_proxy"
+					"value" 			"1"
+				}
+				"stickybomb charge rate"
+				{
+					"attribute_class"	"stickybomb_charge_rate"
+					"value" 			"0.0"
+				}
+				"sticky fizzles"
+				{
+					"attribute_class"	"mod_sticky_fizzles"
+					"value" 			"1"
+				}
+				"max pipebombs decreased"
+				{
+					"attribute_class"	"add_max_pipebombs"
+					"value" 			"-4"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value" 			"0.5"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_minebomb.mdl"
+				}
+			}
+			"static_attrs"
+			{
+				"proxy mine detection radius increased"	"1.5"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_ProxyBombLauncher.Single"
+				"sound_burst"			"Weapon_ProxyBombLauncher.SingleCrit"
+				"sound_double_shot"		"Weapon_Grenade_Mirv.ChargeUp"
+				"sound_special1"		"Weapon_ProxyBomb.Explode"
+			}	
+		}
+		"47"
+		{
+			"name"						"Shock Therapy"
+			"tags"
+			{
+				"can_deal_damage"		"1"
+			}
+			"item_class"				"tf_weapon_taser"
+			"item_type_name"			"#TF_Weapon_Taser"
+			"item_name"					"#TF_Weapon_ShockTherapy"
+			"item_description"			"#TF_Weapon_ShockTherapy_Desc"
+			"item_slot"					"melee"
+			"image_inventory"			"backpack/weapons/c_models/c_lightningmelee/c_lightningmelee"
+			"show_in_armory"			"1"
+			"item_logname"				"taser"
+			"item_iconname"				"taser"
+			"propername"				"1"
+			"model_world"				"models/weapons/w_models/w_lightningmelee.mdl"
+			"model_player"				"models/weapons/v_models/v_lightningmelee.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"medic"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"		"10 0 -6"
+			}
+			"static_attrs"
+			{
+				"effect bar recharge rate increased"	"0.33"
+			}
+			"attributes"
+			{
+				"melee range multiplier"
+				{
+					"attribute_class"	"melee_range_multiplier"
+					"value"				"1.8"
+				}
+				"melee bounds multiplier"
+				{
+					"attribute_class"	"melee_bounds_multiplier"
+					"value"				"1.65"
+				}
+				"crit mod disabled hidden"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+				"damage bonus hidden"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.54"
+				}
+				"ragdolls become ash"
+				{
+					"attribute_class"	"ragdolls_become_ash"
+					"value"				"1"
+				}
+				"heal on smack DISPLAY ONLY"
+				{
+					"attribute_class"	"heal_on_smack_DISPLAY_ONLY"
+					"value"				"1"
+				}
+				"heal rate penalty"
+				{
+					"attribute_class"	"mult_medigun_healrate"
+					"value"				"0.65"
+				}
+				"hidden separator"		"1"
+				"crit vs wet players"
+				{
+					"attribute_class"	"crit_vs_wet_players"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_taunt"			"Taunt.MedicViolinUber"
+			}
+			"mouse_pressed_sound"		"#ui/item_taser_pickup.wav"
+			"drop_sound"				"#ui/item_taser_drop.wav"
+		}
+		//-------------------------------------------------------------------------
+		// 2.1.0 weapons start here!
+		//-------------------------------------------------------------------------
+		"48"
+		{
+			"name"						"Speed Watch"
+			"show_in_armory"			"1"
+			"item_class"				"tf_weapon_invis"
+			"item_name"					"#TF_Weapon_SpeedWatch"
+			"item_type_name"			"#TF_Weapon_Watch"
+			"item_description"			"#TF_Weapon_SpeedWatch_Desc"
+			"item_slot"					"pda2"
+			"anim_slot"					"FORCE_NOT_USED"
+			"image_inventory"			"backpack/weapons/v_models/v_stopwatch"
+			"model_player"				"models/weapons/v_models/v_stopwatch_spy.mdl"
+			"attach_to_hands"			"0"
+			"used_by_classes"
+			{
+				"spy"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"8 0 -6"
+				"set watch panel"						"1"
+			}
+			"attributes"
+			{
+				"set watch is speed VISUAL ONLY"
+				{
+					"attribute_class"	"set_watch_is_speed_VISUAL_ONLY"
+					"value"				"1"
+				}		
+				"move speed bonus while cloaked"
+				{
+					"attribute_class"	"mult_player_movespeed_cloaked"
+					"value"				"1.5"
+				}
+				"cloak consume rate increased"
+				{
+					"attribute_class"	"mult_cloak_meter_consume_rate"
+					"value"				"2.5"
+				}
+				"lose cloak on damage"
+				{
+					"attribute_class"	"lose_cloak_on_damage"
+					"value"				"15"
+				}
+				"mod min cloak to activate HIDDEN"
+				{
+					"attribute_class"	"mod_min_cloak_to_activate"
+					"value"				"14"
+				}
+			}
+			"visuals"
+			{
+				"sound_special1"		"Player.Spy_SpeedCloak"
+				"sound_special2"		"Player.Spy_SpeedUnCloak"
+			}
+			"mouse_pressed_sound"		"#ui/item_watch_pickup.wav"
+			"drop_sound"				"#ui/item_watch_drop.wav"
+		}
+		"49"
+		{
+			"name"						"Chekhov's Punch"
+			"item_class"				"tf_weapon_russianroulette"
+			"item_name"					"#TF_Weapon_Chekhov"
+			"item_description"			"#TF_Weapon_Chekhov_Desc"
+			"item_type_name"			"#TF_Weapon_Chains"
+			"item_slot"					"melee"
+			"show_in_armory"			"1"
+			"attach_to_hands"			"2"
+			"item_logname"				"chekhov"
+			"item_iconname"				"chekhov"
+			"image_inventory"			"backpack/weapons/w_models/w_chekhovs"
+			"model_world"				"models/weapons\w_models\w_chekhovspunch.mdl"
+			"model_player"				"models\weapons\v_models\v_chekhovspunch.mdl"
+			"extra_wearable"			"models\player\items\heavy\chain_wearable_heavy_reference.mdl"
+			"used_by_classes"
+			{
+				"heavy"				"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"8 0 -6"
+			}
+			"attributes"
+			{
+				"chekhov punch VISUAL ONLY STORE 3 CRITS"
+				{
+					"attribute_class"	"VISUALONLY"
+					"value"				"1"
+				}
+				"chekhov punch VISUAL ONLY CRITS CONSUMED BY ALL WEAPONS"
+				{
+					"attribute_class"	"VISUALONLY"
+					"value"				"1"
+				}
+				"melee taken becomes crit on wearer"
+				{
+					"attribute_class"	"melee_taken_becomes_crit_wearer"
+					"value"				"1"
+				}
+				"chekhov punch VISUAL ONLY CRIT ONLY AT FULL CAPACITY"
+				{
+					"attribute_class"	"VISUALONLY"
+					"value"				"1"
+				}
+				
+				// hidden
+				"hidden separator"		"1"
+
+				"gain stored crits on hit"
+				{
+					"attribute_class"	"gain_stored_crits_on_hit"
+					"value"				"1"
+				}
+			//	"lose stored crits on miss"
+			//	{
+			//		"attribute_class"	"lose_stored_crits_on_miss"
+			//		"value"				"1"
+			//	}
+				"always crits on full stored crits"
+				{
+					"attribute_class"	"always_crit_full_stored_crits"
+					"value"				"1"
+				}
+				"cannot use stored crits hidden"
+				{
+					"attribute_class"	"cannot_use_stored_crits"
+					"value"				"1"
+				}
+				"crit mod disabled hidden"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+				"mod melee crit swing custom damage"
+				{
+					"attribute_class"	"mod_melee_crit_swing_custom_damage"
+					"value"				"29"
+				}
+				"melee range multiplier"
+				{
+					"attribute_class"	"melee_range_multiplier"
+					"value"				"1.75"
+				}
+				"custom hand viewmodel"
+				{
+					"attribute_class"	"custom_hand_viewmodel"
+					"value"				"models\weapons\c_models\c_heavy_arms_chains.mdl"
+				}
+			}
+			"visuals"
+			{
+				"animation_replacement"
+				{
+					"ACT_VM_IDLE"		"ACT_FISTS_VM_IDLE"
+					"ACT_VM_HITLEFT"	"ACT_FISTS_VM_HITLEFT"
+					"ACT_VM_HITRIGHT"	"ACT_FISTS_VM_HITRIGHT"
+					"ACT_VM_SWINGHARD"	"ACT_FISTS_VM_SWINGHARD"
+					"ACT_VM_DRAW"		"ACT_FISTS_VM_DRAW"
+					"ACT_MP_ATTACK_STAND_MELEE_SECONDARY"				"ACT_MP_ATTACK_STAND_SECONDARY2"
+					"ACT_MP_ATTACK_CROUCH_MELEE_SECONDARY"				"ACT_MP_ATTACK_CROUCH_SECONDARY2"
+				}
+			}
+			"mouse_pressed_sound"		"#ui/item_pack_pickup.wav"
+			"drop_sound"				"#ui/item_pack_drop.wav"
+		}
+		"50"
+		{
+			"name"						"The Twin Barrel"
+			"item_logname"				"doubleshotgun"
+			"item_iconname"				"doubleshotgun"
+			"item_class"				"tf_weapon_doubleshotgun"
+			"show_in_armory"			"1"
+			"propername"				"1"
+			"item_name"					"#TF_Weapon_TwinBarrel"
+			"item_description"			"#TF_Weapon_TwinBarrel_Desc"
+			"item_type_name"			"#TF_Weapon_DoubleBarrelShotgun"
+			"item_slot"					"secondary"
+			"anim_slot"					"ITEM2"
+			"image_inventory"			"backpack/weapons/c_models/c_doublebarrel"
+			"model_world"				"models/weapons/w_models/w_twinbarrel.mdl"
+			"model_player"				"models/weapons/v_models/v_twinbarrel.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"pyro"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -6"
+			}
+			"attributes"
+			{
+				"scattergun has knockback"
+				{
+					"attribute_class"	"set_scattergun_has_knockback"
+					"value"				"1"
+				}
+				"mod horizontal spread"
+				{
+					"attribute_class"	"mod_horizontal_spread"
+					"value"				"1"
+				}
+				"apply self knockback hidden"
+				{
+					"attribute_class"	"apply_self_knockback"
+					"value"				"400"
+				}
+				"weapon enemy knockback mod mult hidden"
+				{
+					"attribute_class"	"weapon_enemy_knockback_mod"
+					"value"				"0.8"
+				}
+				"special taunt"
+				{
+					"attribute_class"	"special_taunt"
+					"value"				"1"
+				}
+			}			
+			"visuals"
+			{				
+				"sound_single_shot"		"Weapon_DoubleShotgun.Single"
+				"sound_burst"			"Weapon_DoubleShotgun.SingleCrit"
+			}
+			"mouse_pressed_sound"		"#ui/item_wood_weapon_drop.wav"
+			"drop_sound"				"#ui/item_metal_weapon_drop.wav"
+		}
+		"51"
+		{
+			"name"						"Anti-Aircraft Cannon"
+			"prefab"					"weapon_aagun"
+			"show_in_armory"			"1"
+			"item_name"					"#TF_Weapon_AAGun"
+			"item_description"			"#TF_Weapon_AAGun_Desc"
+			"item_type_name"			"#TF_Weapon_AAGun"
+			"item_logname"				"aagun"
+			"item_iconname"				"aa_cannon"
+			"image_inventory"			"backpack/weapons/w_models/w_aagun"
+			"model_world"				"models/weapons/w_models/w_aagun.mdl"
+			"model_player"				"models/weapons/v_models/v_aagun_heavy.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"heavy"					"1"
+			}
+			"static_attrs"
+			{
+				"minigun jump while revved"		"1"
+			}
+			"attributes"													
+			{
+				"explosive bullets"																
+				{
+					"attribute_class"	"explosive_bullets"
+					"value"				"1"
+				}
+				"mod mini-crit airborne on direct DISPLAY ONLY"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"1"
+				}
+				"mod mini-crit airborne simple min height hidden"
+				{
+					"attribute_class"	"mini_crit_airborne_simple_min_height"
+					"value"				"128"
+				}
+				"mod mini-crit airborne hidden"
+				{
+					"attribute_class"	"mini_crit_airborne"
+					"value"				"1"
+				}
+				"limited range DISPLAY ONLY"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"1"
+				}
+				"blast dmg to self increased hidden"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"				"0.5"
+				}
+				"self dmg push force hidden"				
+				{
+					"attribute_class"	"mult_dmgself_push_force"
+					"value" 			"1"
+				}
+				"dmg push force to stickies increased hidden"
+				{
+					"attribute_class"	"mult_dmg_push_force_to_stickies"
+					"value"				"3.0"
+				}
+				"bullet is a hull"
+				{
+					"attribute_class"	"bullet_is_a_hull"
+					"value"				"10.0"
+				}
+				"custom falloff"
+				{
+					"attribute_class"	"mod_custom_falloff"
+					"value"				"0.75"
+				}
+				"modifier mini crit airborne direct hit only hidden"
+				{
+					"attribute_class"	"mod_minicrit_airborne_direct_hit_only"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_empty"			"Weapon_AAGun.ClipEmpty"
+				"sound_double_shot"		"Weapon_AAGun.Fire"
+				"sound_burst"			"Weapon_AAGun.FireCrit"
+				"sound_special1"		"BaseExplosionEffect.Sound"
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_STAND_PRIMARY"				"ACT_MP_ATTACK_STAND_PRIMARY_ALT"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"				"ACT_MP_ATTACK_CROUCH_PRIMARY_ALT"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"				"ACT_MP_ATTACK_SWIM_PRIMARY_ALT"
+				}
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"10 5 -9"
+			}
+			"mouse_pressed_sound"		"#ui/item_heavier_gun_pickup.wav"
+			"drop_sound"				"#ui/item_heavier_gun_drop.wav"
+		}
+		"52"
+		{
+            "name"						"Jumppad"
+            "prefab"					"weapon_pda"
+            "show_in_armory"			"1"
+
+            "item_name"					"#TF_Weapon_PDA_Engineer_Jump"
+			"item_description"			"#TF_Weapon_PDA_Engineer_Jump_Desc"
+			"item_type_name"			"#TF_Weapon_PDA_Engineer_Builder"
+			"image_inventory"			"backpack/weapons/w_models/w_jumppad"
+			"model_world"				"models/weapons/w_models/w_builder.mdl"
+			"model_player"				"models/weapons/v_models/v_builder_engineer.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"engineer"				"1"
+			}
+			"static_attrs"
+			{
+				"teleporter is jump pad"	"1"
+				"mod building upgrade full metal only TURBO"	"1"
+				"hidden separator"			"1"
+				"mod dispenser cost"	"0.7"
+				"blank"					"1"
+			}
+			"mouse_pressed_sound"		"#ui/item_metal_weapon_pickup.wav"
+			"drop_sound"				"#ui/item_metal_weapon_drop.wav"
+		}
+		"53"
+		{
+			"name"						"Harvester"
+			"item_class"				"tf_weapon_beacon"
+            "show_in_armory"			"1"
+			"testing"					"0"
+			"item_name"					"#TF_Weapon_Harvester"
+			"item_type_name"			"#TF_Weapon_Harvester_Type"
+			"item_description"			"#TF_Weapon_Harvester_Desc"
+			"item_slot"					"melee"
+			"item_logname"				"harvester"
+			"item_iconname"				"harvester"
+			"propername"				"1"
+			"image_inventory"			"backpack/weapons/w_models/w_scythe"
+			"model_world"				"models/weapons/w_models/w_scythe.mdl"
+			"model_player"				"models/weapons/v_models/v_scythe_pyro.mdl"
+			"extra_wearable" 			"models/player/items/scythe_wearable.mdl"
+			"extra_wearable_hide_on_active"		"1"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"pyro"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"8 0 -6"
+				"mod beacon max ticks"					"-10"
+				"burning targets always charge crit"	"1"
+				"lifesteal crit beacon"					"195"
+			}
+			"attributes"
+			{
+				"remember targets remaining afterburn"
+				{
+					"attribute_class"	"remember_targets_afterburn"
+					"value"				"1"
+				}
+				"remove targets afterburn on death"
+				{
+					"attribute_class"	"on_death_remove_targets_afterburn"
+					"value"				"1"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+				"special sound on afterburn heal attempt"
+				{
+					"attribute_class"	"afterburn_heal_attempt_sound"
+					"value"				"1"
+				}
+				"hide extra wearable on active"
+				{
+					"attribute_class"	"hide_extra_wearable_active"
+					"value"				"1"
+				}
+				"mod melee crit swing custom damage"
+				{
+					"attribute_class"	"mod_melee_crit_swing_custom_damage"
+					"value"				"27"
+				}
+			}
+			"visuals"
+			{
+				"sound_melee_miss"		"Weapon_Scythe.Miss"
+				"sound_melee_hit"		"Weapon_Scythe.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_Scythe.HitWorld"
+				"sound_burst"			"Weapon_Scythe.MissCrit"
+			}
+			"mouse_pressed_sound"		"#ui/item_knife_large_pickup.wav"
+			"drop_sound"				"#ui/item_metal_weapon_drop.wav"
+		}
+		// gunboats split for demoman description
+		"54"
+		{
+			"name"						"The Gunboats"
+			"prefab"					"valve"
+			"show_in_armory"			"1"
+			"item_class"				"tf_wearable"
+			"item_name"					"#TF_Unique_Blast_Boots"
+			"item_description"			"#TF_Weapon_Gunboats_Desc_Demoman"
+			"item_type_name"			"#TF_Wearable_Boots"
+			"item_slot"					"primary"
+			"equip_region"				"feet"
+			"anim_slot"					"FORCE_NOT_USED"
+			"item_quality"				"normal"
+			"propername"				"1"
+			"image_inventory"			"backpack/weapons/c_models/c_rocketboots_soldier"
+			"model_player"				"models/weapons/c_models/c_rocketboots_demo.mdl"
+			"used_by_classes"
+			{
+				"demoman"				"1"
+			}
+			"loadondemand"				"1"
+			"act_as_wearable"			"1"
+			"attributes"
+			{
+				"rocket jump damage reduction"
+				{
+					"attribute_class"	"rocket_jump_dmg_reduction"
+					"value"				"0.4"
+				}
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"				"1"
+				}
+				"armor footsteps"
+				{
+					"attribute_class"	"mod_armor_footsteps"
+					"value"				"1"
+				}
+			}
+			"mouse_pressed_sound"		"#ui/item_metal_weapon_pickup.wav"
+			"drop_sound"				"#ui/item_metal_weapon_drop.wav"
+		}
+		"55"
+		{
+			"name"						"Brick"
+			"item_class"				"tf_weapon_throwable"
+			"item_slot"					"secondary"
+			"anim_slot"					"secondary2"
+			"show_in_armory"			"1"
+			"testing"					"1"
+			"item_name"					"#TF_Weapon_Brick"
+			"item_type_name"			"#TF_Weapon_Throwable"
+			"item_description"			"#TF_Weapon_Brick_Desc"
+			"image_inventory"			"backpack/weapons/w_models/w_brick"
+			"item_logname"				"brick"
+			"item_iconname"				"brick"
+			"model_player"				"models/weapons/v_models/v_brick_scout.mdl"
+			"model_world"				"models/weapons/w_models/w_brick_scout.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"scout"					"1"
+			}
+			"static_attrs"
+			{
+				"grenade no spin"	"1"
+				"effect bar recharge rate increased"	"0.5"
+				"damage bonus"			"1.2"
+				"hidden separator"		"1"
+				"self dmg push force increased"		"2"
+				"brick explodes"		"1"
+				"stickybomb charge rate"	"0.5"
+				"weapon enemy knockback mod mult increased"		"2"
+				"fuse bonus"			"0.15"
+				"mod explosion no owner check"	"1"
+				"blast radius TURBO"	"146"
+				"no explosion falloff hidden"	"1"
+			}
+			"attributes"
+			{
+				"allowed in medieval mode"
+				{
+					"attribute_class"	"allowed_in_medieval_mode"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+				"sound_special1"		"Weapon_ProxyBomb.Explode"
+			}
+            "visuals_red"
+			{
+				"explosion_effect"		"ExplosionCore_buildings"
+			}
+            "visuals_blu"
+			{
+				"explosion_effect"		"ExplosionCore_buildings"
+			}
+            "visuals_grn"
+			{
+				"explosion_effect"		"ExplosionCore_buildings"
+			}
+            "visuals_ylw"
+			{
+				"explosion_effect"		"ExplosionCore_buildings"
+			}
+			"mouse_pressed_sound"		"#ui/item_pack_pickup.wav"
+			"drop_sound"				"#ui/item_pack_drop.wav"
+		}
+	}
+	"attributes"
+	{
+		"10000"
+		{
+			"name"	"blast radius TURBO"
+			"attribute_class"	"mult_explosion_radius"
+			"description_string"	"#Attrib_BlastRadius_Increased"
+			"description_format"	"value_is_additive"
+			"hidden"	"1"
+			"effect_type"	"positive"
+			"stored_as_integer"	"0"
+		}
+		"10001"
+		{
+			"name"	"blank"
+			"description_string"	" "
+		}
+		"10002"
+		{
+			"name"					"mod building upgrade full metal only TURBO"
+			"attribute_class"		"mod_building_upgrade_full_metal_only"
+			"description_string"	"Building upgrades consume all required metal at once"
+			"description_format"	"value_is_additive"
+			"hidden"				"0"
+			"effect_type"			"neutral"
+			"stored_as_integer"		"0"
+		}
+	}
+}
