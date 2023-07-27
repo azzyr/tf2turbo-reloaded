@@ -1628,6 +1628,988 @@
 			"mouse_pressed_sound"		"#ui/item_pack_pickup.wav"
 			"drop_sound"				"#ui/item_pack_drop.wav"
 		}
+        "10000"
+		{
+			"name"						"TF_WEAPON_FRYING_PAN"
+			"prefab"					"weapon_bat"
+			"show_in_armory"			"1"
+			
+			"propername"				"1"
+			"item_name"					"Frying Pan"
+			"item_type_name"			"Frying Pan"
+			"item_description"			"
+Oh, what's the matter, you can't hear me? Here, lemme fix that, pal."
+			"item_logname"				"fryingpan"
+			"item_iconname"				"fryingpan"
+			"image_inventory"			"backpack/player/items/all_class/all_pan"
+			"model_world"				"models/weapons/w_models/w_frying_pan_scout.mdl"
+			"model_player"				"models/weapons/v_models/v_frying_pan_scout.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"scout"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"5 0 -10"
+			}
+			"attributes"
+			{
+				"deflect on swing"				
+				{
+					"attribute_class"	"deflect_on_swing"
+					"value"				"1"
+				}
+				"self mfd swing"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"1"
+				}
+				"add condition on swing"					
+				{
+					"attribute_class"	"add_onswing_addcond"							
+					"value"				"48 0.75"										
+				}
+				"fire rate penalty"		
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"1.5"
+				}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value" 			"-15"
+				}
+				// Backend stuff
+				"hide_attrib_additive"															// APPARENTLY, this is considered an Airblast internally... so we have to disable that to prevent Scout griefing
+				{
+					"attribute_class"	"disable_airblasting_players"
+					"value"				"1"
+				}
+			}	
+			"visuals"
+			{
+				"sound_melee_miss"		"Weapon_Crowbar.Miss"
+				"sound_melee_hit"		"FryingPan.HitFlesh"
+				"sound_melee_hit_world"	"FryingPan.HitWorld"
+				"sound_burst"			"Weapon_Crowbar.MissCrit"
+				"animation_replacement"
+				{
+					"ACT_MP_GESTURE_VC_FISTPUMP_MELEE"			"ACT_MP_GESTURE_VC_FINGERPOINT_MELEE" // Scuffed, but this makes it so that your Class will point when doing a Battlecry for soon-evident reasons. This technically also effects the Cheers VC, but eh.
+				}
+			}
+			"mouse_pressed_sound"		"#ui/item_metal_pot_pickup.wav"							// Some UI sounds are different from live TF2's just for extra effect, like this clattering when picking up or dropping a pan!
+			"drop_sound"				"#ui/item_metal_pot_drop.wav"
+		}
+		"10001"
+		{
+			"name"						"TF_WEAPON_STEN_NAILGUN"
+			"prefab"					"weapon_smg"
+			"show_in_armory"			"1"
+
+			"propername"				"1"
+			"item_name"					"Sydney Spikeshooter"
+			"item_type_name"			"#TF_Weapon_Nailgun"
+			"item_description"			"Fires timed explosive nails
+
+Careful, lad, she's prone to start
+overheating quick, when things get tough."
+			"item_logname"				"sten_nailgun"
+			"item_iconname"				"sten_nailgun"
+			"image_inventory"			"backpack/weapons/w_models/w_stengun"
+			"model_world"				"models/weapons/w_models/w_stengun.mdl"
+			"model_player"				"models/weapons/v_models/v_stengun_sniper.mdl"			// TO-DO: Should the eject port move?
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"sniper"				"1"
+			}
+			"static_attrs"
+			{
+				"override projectile type"				"30"		
+				"damage bonus hidden"					"1.0"		
+				"fire rate penalty hidden"				"1.25"
+				"clip size penalty hidden"				"0.47"
+				"Projectile speed increased hidden"				"0.6"
+				"hidden secondary max ammo penalty"		"0.65"
+				"reload time increased hidden"			"1.65"
+				"min_viewmodel_offset"					"10 0 -10"
+				"custom projectile origin offset"		"0 0 -10"
+			}
+			"attributes"
+			{
+				"rocket limited lifetime"				
+				{
+					"attribute_class"	"rocket_lifetime"
+					"value"				"2"
+				}
+				"hide_attrib_additive"
+				{
+					"attribute_class"	"apply_z_velocity_on_damage"
+					"value"				"165"		
+				}
+				"hide_attrib_percentage"	
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"2.0" 
+				}
+				"hide_attrib_additive"						
+				{
+					"attribute_class"	"mod_rocket_gravity"
+					"value"				"1.0"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_nail.mdl"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_STENGun.Single"
+				"sound_burst"			"Weapon_STENGun.SingleCrit"
+				"muzzle_flash"			"muzzle_tranq"
+				"sound_special1"		"Weapon_FlechetteGun.Explode"
+				"sound_special3"		"Weapon_FlechetteGun.Detonate"
+				"explosion_effect"		"coilgun_boom_red"
+			}
+			"visuals_red"
+			{
+				"trail_effect"	"nailtrails_scout_red"
+				"trail_effect_crit"	"nailtrails_scout_red_crit"
+			}
+			"visuals_blu"
+			{
+				"trail_effect"	"nailtrails_scout_blue"
+				"trail_effect_crit"	"nailtrails_scout_blue_crit"
+			}
+			"visuals_grn"
+			{
+				"trail_effect"	"nailtrails_scout_green"
+				"trail_effect_crit"	"nailtrails_scout_green_crit"
+			}
+			"visuals_ylw"
+			{
+				"trail_effect"	"nailtrails_scout_yellow"
+				"trail_effect_crit"	"nailtrails_scout_yellow_crit"
+			}
+			"mouse_pressed_sound"		"#weapons/nail_gun_draw.wav"
+			"drop_sound"				"#ui/item_metal_scrap_drop.wav"
+		}
+		"10002"
+		{
+			"name"						"TF_WEAPON_KNIFE_GUN"
+			"prefab"					"weapon_knife"
+			"show_in_armory"			"1"
+
+			"propername"				"1"
+			"item_name"					"Inside Jab"
+			"item_type_name"			"...Revolver?"
+			"item_description"			"
+Little do they know, you have
+brought a knife-gun to a knife fight!"
+			"item_logname"				"knife_gun"
+			"item_iconname"				"knife_gun"
+			"image_inventory"			"backpack/workshop/weapons/c_models/c_pistol_knife/c_pistol_knife"
+			"model_world"				"models/weapons/w_models/w_pistol_knife.mdl"
+			"model_player"				"models/weapons/v_models/v_pistol_knife_spy.mdl"
+			"attach_to_hands"			"2"
+			"extra_wearable"			"models/weapons/w_models/w_pistol_knife.mdl"
+			"extra_wearable_hide_on_active"	"1"
+			"drop_type"					"none"
+			"used_by_classes"
+			{
+				"spy"					"1"
+			}
+			"static_attrs"
+			{
+				"particle on melee hit"					"coilgun_destroyed"	
+				"hide extra wearable on active"			"1"
+				"melee range multiplier increased"		"1.25"	
+				"fire rate bonus"					"0.85"
+				"turbo backstabs dont instakill"				"1"
+			}
+			"visuals"
+			{
+				"sound_melee_hit"		"Weapon_PistolKnife.Hit"
+				"sound_melee_hit_world"	"Weapon_PistolKnife.Hit"
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_STAND_MELEE_SECONDARY"			"ACT_MP_ATTACK_STAND_MELEE"
+				}
+			}
+			"mouse_pressed_sound"		"#ui/item_watch_pickup.wav"
+			"drop_sound"				"#ui/item_watch_drop.wav"
+		}
+		"10003"
+		{
+			"name"						"TF_WEAPON_DERRINGER"
+			"prefab"					"weapon_revolver"
+			"show_in_armory"			"1"
+
+			"propername"				"1"
+			"item_name"					"Covert Operator"
+			"item_type_name"			"Derringer"
+			"item_description"			"
+A discrete gun, for undercover operations.
+Useful, for causing chaos within groups."
+			"item_logname"				"derringer"
+			"item_iconname"				"derringer"
+			"image_inventory"			"backpack/weapons/w_models/w_derringer"
+			"model_world"				"models/weapons/w_models/w_derringer.mdl"
+			"model_player"				"models/weapons/v_models/v_derringer_spy.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"spy"					"1"
+			}
+			"attributes"
+			{
+				"can headshot"
+				{
+					"attribute_class"	"can_headshot"
+					"value"				"1"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.75"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"VISUALONLY"
+					"value" 			"0.65"
+				}
+				"voice pitch scale"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" 			"0.625"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"0.34"
+				}
+				"always draw tracer"
+				{
+					"attribute_class"	"mod_always_draw_tracer_effect"
+					"value" 			"1"
+				}
+			}
+
+			"static_attrs"
+			{
+				"hidden separator"	"1"
+				"weapon spread bonus"				"0"
+			}
+			"visuals"
+			{
+				"sound_empty"			"Weapon_Null"											// Quiets the reload slightly and makes it less repetitive to fire constantly
+				"sound_single_shot"		"Weapon_Derringer.Single"
+				"sound_burst"			"Weapon_Derringer.SingleCrit"
+				"sound_reload"			"Weapon_Derringer.WorldReload"
+				"muzzle_flash"			"muzzle_pistol"
+			}
+			"mouse_pressed_sound"		"#items/pickup_small.wav"
+			"drop_sound"				"#ui/item_light_gun_drop.wav"
+		}
+		"10004"
+		{
+			"name"						"TF_WEAPON_AA12_REPEATER"
+			"prefab"					"weapon_shotgun"
+			"item_class"				"tf_weapon_scattergun"									// So it ejects Shotgun shells and generally acts like a Shotgun. Bonus of having great rampup + higher damage!
+			"show_in_armory"			"1"
+			"item_slot"					"primary"
+			"anim_slot"					"secondary"
+			"equip_region"				"heavy_bullets"
+
+			"propername"				"1"
+			"item_name"					"Russian Repeater"									// Lind. I have my reasons. I'm not telling you.
+			"item_type_name"			"Auto-Shotgun"
+			"item_description"			"
+Lind is quiet. Steady. But, she is ferocious.
+You will not know we are coming, coward!"
+			"item_logname"				"aa12_repeater"
+			"item_iconname"				"aa12_repeater"
+			"image_inventory"			"backpack/weapons/w_models/w_aa12_repeater"
+			"model_world"				"models/weapons/w_models/w_aa12_repeater.mdl"
+			"model_player"				"models/weapons/v_models/v_aa12_repeater_heavy.mdl"		// It can't reload currently.
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"heavy"					"1"	
+			}
+			"static_attrs"
+			{
+				"class select override vcd"				"taunt02"								// Same deal as the HMG!
+			}
+			"attributes"
+			{
+				"mod no reload DISPLAY ONLY"													// This is merging the hide-weapon trick with a display-only attribute!
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value" 			"-1"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" 			"0.8"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"1.5"
+				}
+				"max health additive penalty"
+				{
+					"attribute_class"	"add_maxhealth"
+					"value" 			"-50"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_AA12_Repeater.Single"
+				"sound_burst"    		"Weapon_AA12_Repeater.SingleCrit"
+			}
+			"mouse_pressed_sound"		"#items/pickup_large.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+		}
+		"10005"
+		{
+			"name"						"TF_WEAPON_RAILGUN_DM"									// Yet another OF Weapon! They make good weapon material tbf.
+			"prefab"					"weapon_shotgun"										// The internals for the Railgun are kinda strange, I might need to refactor it in a future update?
+			"show_in_armory"			"1"
+			"item_slot"					"primary"
+
+			"propername"				"1"
+			"item_name"					"Super Railgun"
+			"item_type_name"			"Railgun"
+			"item_description"			"
+Some ol' Texan engineering here and some plasma there, goes a mighty long ways."
+			"item_logname"				"railgun_dm"
+			"item_iconname"				"railgun_dm"
+			"image_inventory"			"backpack/weapons/w_models/w_railgun"
+			"model_world"				"models/weapons/w_models/w_railgun.mdl"					// The viewmodel and worldmodel have some weird clipping problems, but there isn't a lot I can do about it sadly..
+			"model_player"				"models/weapons/v_models/v_railgun_engineer.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"engineer"				"1"
+				"mercenary"				"1"
+			}
+			"static_attrs"
+			{
+				"override projectile type"				"32"									// Coilgun laser!
+				"mod max primary clip override"			"-1"
+				"damage bonus hidden"					"15"
+				"hidden primary max ammo bonus"			"0.5"	
+				"ragdolls become ash"					"1"
+				"mod coil max bounces"					"-3"
+				"custom rampup"							"0.71"									// Encourages Engis to use this as a longer-range option
+				"longer damage falloff distance"		"3.25"									// Rampup takes effect from further away...
+			}
+			"attributes"																		// The stats here are kinda weird, for now
+			{
+//				"hide_attrib_additive"		
+//				{
+//					"attribute_class"	"provide_on_active"
+//					"value" 			"1"
+//				}
+				"weapon fires lasers"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"1"
+				}
+				"damage at range increased"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"1"
+				}
+                "hide_attrib_percentage"														// Hid a bunch of these as of NOWP v2.5.0
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"3.17"
+				}
+				"hide_attrib_percentage"	
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"0" 
+				}
+				"fire rate penalty hidden"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"2.75"
+				}
+				"dmg penalty vs buildings"
+				{
+					"attribute_class"	"mult_dmg_vs_buildings"
+					"value" 			"0.34"
+				}
+				"sniper no charge"
+				{
+					"attribute_class"	"unimplemented_mod_sniper_no_charge"
+					"value"				"1"
+				}
+//				"no headshot"																	// I don't get why you guys want it to headshot so badly, I'm nOT doing it!! If you want it done, copy the internals and make it from the ground up (for Sniper)
+//				{
+//					"attribute_class" 	"no_headshot"
+//					"value" 			"1"
+//				}
+//				"rocket limited lifetime"
+//				{
+//					"attribute_class"	"rocket_lifetime"
+//					"value"				"1.2"
+//				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_RailgunDM.Single"								// This actually caused some weird issues for a few moments - the Coilgun's sounds already go by Weapon_Railgun!
+				"sound_burst"			"Weapon_RailgunDM.SingleCrit"
+				"sound_reload"			"Weapon_RailgunDM.Charge"								// Since it's a Sniper Rifle, it doesn't seem to play World Reload sounds...
+				"sound_special1"		"Weapon_CowMangler.Explode"								// If we decide we want the lasers to blow up, might be neat?
+				"muzzle_flash"			"muzzle_tranq"
+			}
+			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+		}
+		"10006"
+		{
+			"name"						"TF_WEAPON_MARKET_GARDENER"
+			"prefab"					"weapon_shovel"
+			"show_in_armory"			"1"
+
+			"propername"				"1"
+			"item_name"					"Market Gardener"
+			"item_type_name"			"#TF_Weapon_Shovel"
+			"item_description"			"
+Boots on the ground won't cut it, soldier.
+Blast off, and give 'em hell!"
+			"item_logname"				"market_gardener"
+			"item_iconname"				"market_gardener"
+			"image_inventory" 			"backpack/workshop/weapons/c_models/c_market_gardener/c_market_gardener"
+			"model_world"				"models/weapons/w_models/w_market_gardener.mdl"
+			"model_player"				"models/weapons/v_models/v_market_gardener_soldier.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"soldier"				"1"
+			}
+			"attributes"
+			{
+				"mod crit while airborne short"													// IT'S BACK, BABY!! As a bonus, this also triggers when you're in the air from Jump Pads, too!
+				{
+					"attribute_class"	"crit_while_airborne"									// Also triggers for: SSG Jump, Musket Jump, Brick Jump
+					"value"				"1"														// Does NOT trigger for: LMG Boost Jump
+				}
+				"melee taken becomes crit on wearer"
+				{
+					"attribute_class"	"melee_taken_becomes_crit_wearer"
+					"value"				"1"
+				}
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+			}
+			"mouse_pressed_sound"		"#ui/item_shovel_pickup.wav"
+			"drop_sound"				"#ui/item_shovel_drop.wav"
+		}
+		"10007"
+		{
+			"name"						"TF_WEAPON_SYRINGE_SHOT"								// NOTE: THIS DEV. VERSION SHOOTS -BULLETS-. This is only to visualize how many projectiles I want it to fire.
+			"prefab"					"weapon_shotgun"										// It will NOT, I repeat NOT shoot bullets under any circumstance in the final version.
+			"show_in_armory"			"1"
+			"item_slot"					"primary"
+
+			"propername"				"1"
+			"item_name"					"Vogeljäger"
+			"item_type_name"			"Pelletgun"
+			"item_description"			"
+Vhat, have you never heard of
+a Medical Shotgun before!?"																		// (No Syringe Buckshot included... for now)
+			"item_logname"				"syringe_shot"
+			"item_iconname"				"syringe_shot"
+			"image_inventory"			"backpack/weapons/w_models/w_syringe_shot"
+			"model_world"				"models/weapons/w_models/w_syringe_shot.mdl"
+			"model_player"				"models/weapons/v_models/v_syringe_shot_medic.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"medic"					"1"
+			}
+			"static_attrs"
+			{
+				"fire rate bonus with reduced health"			"0.4"
+				"clip size bonus"					"1.25"
+				"spread penalty"					"1.35"
+				"damage penalty"					"0.8"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_SyringeShot.Single"
+				"sound_burst"    		"Weapon_SyringeShot.SingleCrit"
+				"muzzle_flash"			"muzzle_tranq"
+				"animation_replacement"
+				{
+					"ACT_MP_ATTACK_STAND_PRIMARY"					"ACT_MP_GESTURE_FLINCH_CHEST"
+					"ACT_MP_ATTACK_CROUCH_PRIMARY"					"ACT_MP_GESTURE_FLINCH_CHEST"
+					"ACT_MP_ATTACK_SWIM_PRIMARY"					"ACT_MP_GESTURE_FLINCH_CHEST"
+
+					"ACT_MP_RELOAD_STAND_PRIMARY_LOOP"				"ACT_MP_RELOAD_STAND_PRIMARY"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY_LOOP"				"ACT_MP_RELOAD_CROUCH_PRIMARY"
+					"ACT_MP_RELOAD_SWIM_PRIMARY_LOOP"				"ACT_MP_RELOAD_SWIM_PRIMARY"
+
+					"ACT_MP_RELOAD_STAND_PRIMARY_END"				"ACT_MP_ATTACK_STAND_PRIMARY"
+					"ACT_MP_RELOAD_CROUCH_PRIMARY_END"				"ACT_MP_ATTACK_CROUCH_PRIMARY"
+					"ACT_MP_RELOAD_SWIM_PRIMARY_END"				"ACT_MP_ATTACK_SWIM_PRIMARY"
+				}
+			}
+			"mouse_pressed_sound"		"#items/pickup_large.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+		}
+		"10008"
+		{
+			"name"						"TF_WEAPON_CABER"										// Copied from C4Bat
+			"prefab"					"weapon_bottle"
+			"item_class"				"tf_weapon_tranq"										// Hacky, I figure this is the weapon literally nobody would want to give Scout or Demoman when 1000 better alternatives exist. Therefore, works fine for this hack-fix...
+			"show_in_armory"			"1"
+			"anim_slot"					"melee"
+			"bucket"					"2"														// Visually appears in melee
+			"bucket_position"			"1"
+
+			"propername"				"1"
+			"item_name"					"Ullapool Caber"
+			"item_type_name"			"Stielhandgranate"
+			"item_description"			"
+A sober person would throw it."
+			"item_logname"				"ullapool_caber"
+			"item_iconname"				"ullapool_caber_explosion"
+			"image_inventory" 			"backpack/workshop/weapons/c_models/c_caber/c_caber"
+			"model_world"				"models/weapons/w_models/w_caber.mdl"
+			"model_player"				"models/weapons/v_models/v_caber_demoman.mdl"			// TO-DO: I'd like to attach a "smoking" particle effect on the broken model only, but no way to toggle that only using bodygroups afaik...
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"demoman"				"1"
+			}
+			"static_attrs"
+			{
+				"override projectile type" 				"2"										// This fires a rocket! Not much to say.
+				"damage bonus hidden"					"4.25"									// 100 DMG at closest range. This isn't really pulled from anything, it just feels fair. The real damage of a Caber explosion + hit is about, say, 135 dmg. Oneshots lights... And that assumes it's single-use...
+				"reload time increased hidden"			"1.5"									// Slower than C4Bat - 2.25s (about 3.5x slower than base)
+				"mod use custom ammo type"				"5"										// Uses Grenades2 as ammo, so as to not interfere with other items like Bonk or etc...
+				"explode on smack DISPLAY ONLY"			"1"
+				"allowed in medieval mode"				"1"
+				"mod crit while airborne short"			"1"
+			}
+			"attributes"
+			{
+				"hide_attrib_additive"													// This has great flavor text application honestly
+				{
+					"attribute_class"	"centerfire_projectile"
+					"value"				"1"
+				}
+				"hide_attrib_percentage"	
+				{
+					"attribute_class"	"mult_dmg_vs_buildings"
+					"value" 			"1.015"													// Makes it do in the ballpark of 75 dmg to buildings - aka the unboosted damage of a caber explosion alone
+				}
+
+				"melee taken becomes crit on wearer"
+				{
+					"attribute_class"	"melee_taken_becomes_crit_wearer"
+					"value"				"1"
+				}
+				"take crits from projectile during blast jump"
+				{
+					"attribute_class"	"take_crits_projectile_blast_jump"
+					"value"				"1"
+				}
+				// Backend stuff; most of this is copied from the jetpack
+				"rocket limited lifetime"
+				{
+					"attribute_class"	"rocket_lifetime"
+					"value"				"0.00001"												// Rockets explode INSTANTLY - which is somewhere in front of your torso!
+				}
+				"hide_attrib_percentage"	
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value" 			"8"													// Self blast damage! He takes about -45 HP, which is survivable albeit with a good chunk of health gone
+				}
+				"damage force increase hidden"
+				{
+					"attribute_class"	"mult_dmgself_push_force"
+					"value" 			"-1.5"													// A weak-ish blast, but it'll help make further jumps than usual, especially with other items
+				}
+				"hide_attrib_additive"		
+				{
+					"attribute_class"	"apply_z_velocity_on_damage"
+					"value"				"250"													// Enough lift-off force on taking damage to get you off the ground, even if you use it from a standstill
+				}
+				"hide_attrib_additive"															// Copied from Satchel
+				{
+					"attribute_class"	"use_ammo_meter"
+					"value"				"1"
+				}
+				"hide_attrib_additive"		
+				{
+					"attribute_class"	"energy_weapon_no_ammo"
+					"value" 			"1"
+				}
+//				"mod melee crit swing custom damage"
+//				{
+//					"attribute_class"	"mod_melee_crit_swing_custom_damage"
+//					"value"				"29"
+//				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Crowbar.Miss"
+				"sound_melee_miss"		"Weapon_Crowbar.Miss"
+				"sound_burst"			"Weapon_Crowbar.MissCrit"
+				"sound_melee_hit"		"Weapon_Fishwhacker.HitFlesh"
+				"sound_melee_hit_world"	"Weapon_Crowbar.HitWorld"
+				"sound_empty"			"Weapon_Null"
+				"sound_reload"			"Weapon_Null"
+				"sound_special1"		"Weapon_LooseCannon.Explode"							// Heavier sound than the C4Bat
+				"explosion_effect"		"explosion_shrapnel_PARENT"
+			}
+			"visuals_red"
+			{
+				"explosion_effect_crit"	"explosion_shrapnel_PARENT_red_crit"
+			}
+			"visuals_blu"
+			{
+				"explosion_effect_crit"	"explosion_shrapnel_PARENT_blue_crit"
+			}
+			"visuals_grn"
+			{
+				"explosion_effect_crit"	"explosion_shrapnel_PARENT_green_crit"
+			}
+			"visuals_ylw"
+			{
+				"explosion_effect_crit"	"explosion_shrapnel_PARENT_yellow_crit"
+			}
+			"mouse_pressed_sound"		"#ui/item_wood_weapon_pickup.wav"
+			"drop_sound"				"#ui/item_wood_weapon_drop.wav"
+		}
+		"10009"
+		{
+			"name"						"TF_WEAPON_BASEBALLGUN"									// This was a doozy, the idea came to me last-minute while talking to some folks in the Discord. A unique Scout primary!
+			"prefab"					"weapon_scattergun"
+			"item_class"				"tf_weapon_grenadelauncher"								// Fixes some issues with the grenades not being affected by speed and doing no damage sometimes
+			"anim_slot"					"primary"
+			"show_in_armory"			"1"
+
+			"propername"				"1"
+			"item_name"					"B.R. Base-Hitter"									// Named after The Bambino himself
+			"item_type_name"			"Baseball Gun"
+			"item_description"			"
+Perfect for baseball practice at home,
+or for free concussions on the battlefield."
+			"item_logname"				"baseball_gun"
+			"item_iconname"				"baseball_gun"
+			"image_inventory"			"backpack/weapons/w_models/w_baseballgun_alt"
+			"model_world"				"models/weapons/w_models/w_baseballgun_alt.mdl"
+			"model_player"				"models/weapons/v_models/v_baseballgun_alt_scout.mdl"	// Don't think too hard about how he reloads it, at least he does SOMETHING unlike the Sniper Crossbow...
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"scout"					"1"
+			}
+			"static_attrs"
+			{
+				"override projectile type"				"3"
+//				"damage bonus hidden"					"0.45"
+				"reload time increased hidden"			"0.8"
+				"hidden primary max ammo bonus"			"2"
+				"damage bonus hidden"					"0.315"
+				"custom rampup"							"1.75"									// Rampup / falloff on a projectile weapon feels very scuffed
+				"custom falloff"						"0.5"									// I don't think this actually works yet????
+			}
+			"attributes"
+			{
+                "weapon fires baseballs"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"1"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.6"
+				}
+                "hide_attrib_percentage"														// Hidden since it doesn't help imply much about weapon function
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"2.35"
+				}
+				"clip size penalty"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value" 			"0.67"
+				}
+				// Backend stuff
+				"hide_attrib_percentage"														// Mostly removes the blast radius - you have to score a direct hit for this to do anything.
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"				"0.15"
+				}
+				"hide_attrib_percentage"	
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value" 			"0"
+				}
+				"damage force increase hidden"
+				{
+					"attribute_class"	"mult_dmgself_push_force"
+					"value" 			"0"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_baseball.mdl"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_BaseballGun.Single"
+				"sound_burst"			"Weapon_BaseballGun.SingleCrit"
+				"sound_special1"		"Weapon_Baseball.Hit"										// Better than nothing, I guess!
+				"sound_special2"		"Weapon_BaseballGun.Single"								// Placeholder
+				"sound_special3"		"Weapon_Baseball.HitWorld"
+				"sound_reload"			"Weapon_Scatter_Gun.WorldReload"
+				"muzzle_flash"			"muzzle_pipelauncher"
+				"explosion_effect"		"taunt_flip_land"										// Even lower-key dust effect than the Brick!
+			}
+			"visuals_red"
+			{
+				"trail_effect"			"stickybombtrail_red"
+				"trail_effect_crit"		"critical_grenade_red"
+				"explosion_effect_crit"	"coilgun_boom_red"
+			}
+			"visuals_blu"
+			{
+				"trail_effect"			"stickybombtrail_blue"
+				"trail_effect_crit"		"critical_grenade_blue"
+				"explosion_effect_crit"	"coilgun_boom_blue"
+			}
+			"visuals_grn"
+			{
+				"trail_effect"			"stickybombtrail_green"
+				"trail_effect_crit"		"critical_grenade_green"
+				"explosion_effect_crit"	"coilgun_boom_green"
+			}
+			"visuals_ylw"
+			{
+				"trail_effect"			"stickybombtrail_yellow"
+				"trail_effect_crit"		"critical_grenade_yellow"
+				"explosion_effect_crit"	"coilgun_boom_yellow"
+			}
+			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+		}
+		"10010"
+		{
+			"name"						"TF_WEAPON_DUMPSTERDEVICE"								// Thanks to some weird developments with Splicing 2.0 (thanks Azzy / Goatball!), was able to bodge this together...
+			"prefab"					"weapon_rocketlauncher"
+			"show_in_armory"			"1"
+
+			"propername"				"1"
+			"item_name"					"Beggar's Bazooka"
+			"item_type_name"			"#TF_Weapon_RocketLauncher"
+			"item_description"			"
+They said it was illegal! And they were right.
+It's illegal how good at mass-murder this is."
+			"item_logname"				"dumpster_device"
+			"item_iconname"				"dumpster_device"
+			"image_inventory"			"backpack/workshop/weapons/c_models/c_dumpster_device/c_dumpster_device"
+			"model_world"				"models/weapons/w_models/w_dumpsterdevice.mdl"
+			"model_player"				"models/weapons/v_models/v_dumpsterdevice_soldier.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"soldier"				"1"
+			}
+			"attributes"
+			{
+				"rocket barrage"
+				{
+					"attribute_class"	"DISPLAY_ONLY"
+					"value"				"3"
+				}
+				"voice pitch scale"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.3"
+				}
+				"clip size penalty hidden"
+				{
+					"attribute_class"	"mult_clipsize"
+					"value"				"0.75"
+				}
+
+				"hide_attrib_additive"															// Splicing 2.0! Also I'm not really sure if this is actually 3deg, but it feels right.
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"0.122173" 												// Made a little more extreme than what I think it "should" be (0.075) to offset the completely insane on-demand burst
+				}
+				"projectile spread angle penalty"
+				{
+					"attribute_class"	"projectile_spread_angle"
+					"value"				"7"
+				}
+				"reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"				"1.3"													// 1.3
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_rocket_beggarsbazooka.mdl"	// That's the last of 'em! Beside the Air Strike, this is the last unique rocket model to deal with!
+				}
+				// Backend stuff
+				"hide_attrib_percentage"	
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"0.85"													// 17 reserve so it's as if you had to load a few in first (Live Beggar's has a normal reserve of 20, but 0 default clipsize, so you load 3 in)
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Does_Dumpster.Single"
+				"sound_burst"			"Weapon_Does_Dumpster.SingleCrit"
+				"sound_reload"			"Weapon_DumpsterRocket.Reload_RandomPitch"				// Since there's no way to tell how far into the reload you are, it just makes randomly pitched noises all the time!
+				"sound_special1"		"Weapon_RPG_BlackBox.Explode"
+			}
+			"mouse_pressed_sound"		"#ui/item_heavier_gun_pickup.wav"						// This isn't physically heavy, but it makes these sounds because of its poor construction (plus it's still heavy)
+			"drop_sound"				"#ui/item_heavier_gun_drop.wav"
+		}
+		"10011"
+		{
+			"name"						"TF_WEAPON_SHORTFUSE"									// Unconventional, but I began work on this weapon as a spiritual successor to my old TF2C B4 Demo Revolver. Of course, it evolved into somethin else...
+			"prefab"					"weapon_grenade_launcher"
+			"show_in_armory"			"1"
+
+			"propername"				"1"
+			"item_name"					"Marksmaster"										// Rarer nowadays, but this was one of those few weapons that just REPLACES another weapon entirely - textures and all. Sorta had to hex it away from just being a Loch-n-Load...
+			"item_type_name"			"#TF_Weapon_GrenadeLauncher"
+			"item_description"			"
+'In your language: 'Eat lead', laddies!'"
+			"item_logname"				"shortfuse"
+			"item_iconname"				"shortfuse"
+			"image_inventory"			"backpack/weapons/w_models/w_shortfuse"
+			"model_world"				"models/weapons/w_models/w_shortfuse.mdl"				// There's a little strap loop on the front grip of the gun with Jigglebones... but that gets covered by Demoman's hands 90% of the time anyway???? Why is it there??
+			"model_player"				"models/weapons/v_models/v_shortfuse_demo.mdl"			// For this set of anims (LnL), I decided to get rid of the clicky sound, since that was only there to imply the movement of the cylinder (which LnL + derivatives clearly lack)
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"demoman"				"1"
+			}
+			"attributes"
+			{
+				"grenade no spin"																// This does work, it makes the grenades fly true like a missile
+				{
+					"attribute_class"	"grenade_no_spin"
+					"value"				"1"
+				}
+                "Projectile speed increased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"1.33"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.8"
+				}
+				"sticky air burst mode"															// Shattering bombs! Helps put more focus on aiming for the airburst sweetspot, or otherwise just hitting people directly. Just aiming randomly won't cut it
+				{
+					"attribute_class"	"set_detonate_mode"
+					"value"				"2"
+				}
+				"damage penalty"																// 75 damage, fair! If you land all three shots, that's 225 in quick order. A lot, but two pipes from a regular GL does that too. It's really about timing!
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"0.75"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_shortfuse_grenade.mdl"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_ShortFuse.Shoot"
+				"sound_burst"			"Weapon_ShortFuse.ShootCrit"
+				"sound_special1"		"Weapon_AirBurster.Explode"
+				"sound_reload"			"Weapon_GrenadeLauncher.WorldReload"
+				"explosion_effect"		"explosion_shrapnel_PARENT"
+			}
+			"visuals_red"
+			{
+				"explosion_effect_crit"	"explosion_shrapnel_PARENT_red_crit"
+			}
+			"visuals_blu"
+			{
+				"explosion_effect_crit"	"explosion_shrapnel_PARENT_blue_crit"
+			}
+			"visuals_grn"
+			{
+				"explosion_effect_crit"	"explosion_shrapnel_PARENT_green_crit"
+			}
+			"visuals_ylw"
+			{
+				"explosion_effect_crit"	"explosion_shrapnel_PARENT_yellow_crit"
+			}
+			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+		}
+		"10012"
+		{
+			"name"						"TF_WEAPON_AFTERBURNER"									// A little bit of an emergency addition, admittedly... somethin came up. But, hey, I was plannin on doin this anyway!
+			"prefab"					"weapon_flamethrower"									// Another scrapped-ish weapon from Live TF2, this time focused on airblasting!
+			"show_in_armory"			"1"
+
+			"propername"				"1"
+			"item_name"					"Afterburner"										// I couldn't really think of a better name, though I must admit this is weird since it doesn't really... afterburn
+			"item_type_name"			"#TF_Weapon_Flamethrower"
+			"item_description"			"
+Switch your arson to turbo, with the
+latest in jet-fueled technology!"
+			"item_logname"				"afterburner"
+			"item_iconname"				"afterburner"											// This came with kill icons!! Makes my job easier, at least.
+			"image_inventory"			"backpack/weapons/w_models/w_afterburner"
+			"model_world"				"models/weapons/w_models/w_afterburner.mdl"				// The worldmodel has a cute spin animation for the jet turbine!
+			"model_player"				"models/weapons/v_models/v_afterburner_pyro.mdl"
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"pyro"					"1"
+			}
+			"static_attrs"																		// A little simplistic, but god I don't want to deal with the flames themselves. I hate making flamethrowers. This modifies airblast and airblast ONLY.
+			{
+				"turbo flamethrower pushback"		"1"
+				"airblast cost increased"				"2.5"									// ...but airblast costs 10 more ammo (from 20), you can use it 6 times in a row
+				"flame ammopersec increased"					"1.33"
+				"hidden separator"				"1"
+				"apply self knockback"			"30"									// New attribute!! This sends you back a bit when you airblast. I decided to not make it very strong, so Pyro is still incentivized to use his mobility secondaries (it's also too convenient)
+			}
+			"visuals"																			// The sounds of this weapon were pretty simple, but I added some layered engine / fan noises to help sell it while it fires
+			{
+				"sound_single_shot"		"Weapon_AfterBurner.FireStart"
+//				"sound_special1"		"Weapon_AfterBurner.FireLoop"
+				"sound_reload"			"Weapon_AfterBurner.FireLoop"
+				"sound_special3"		"Weapon_AfterBurner.WindDown"
+				"sound_double_shot"		"Weapon_AfterBurner.AirBurstAttack"						// Technically, EVERY flamethrower can have a custom airblast sound, but I figured none of them really need it since airblast is identical...
+				"sound_burst"			"Weapon_AfterBurner.FireLoopCrit"
+			}
+			"mouse_pressed_sound"		"#ui/item_flamethrower_pickup.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
+		}
 	}
 	"attributes"
 	{
@@ -1655,6 +2637,95 @@
 			"hidden"				"0"
 			"effect_type"			"neutral"
 			"stored_as_integer"		"0"
+		}
+		// azzy
+		"50000"
+		{
+			"name"					"turbo backstabs dont instakill"
+			"attribute_class"		"DISPLAY_ONLY"
+			"description_string"	"Backstabs are not instant kills"
+			"description_format"	"value_is_percentage"
+			"effect_type"			"negative"
+			"hidden"				"0"
+		}
+		"50001"
+		{
+			"name"					"turbo mod explosive nails launcher"
+			"description_string"	"Fires timed explosive nails"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+		}
+		"50002"
+		{
+			"name"					"turbo explosive nails no stick no det"
+			"description_string"	"Nails do not stick to players, and
+cannot be manually detonated"
+			"description_format"	"value_is_additive"
+			"effect_type"			"negative"
+		}
+		"50003"
+		{
+			"name"					"turbo flamethrower pushback"
+			"description_string"	"Primary fire deals self knockback"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+		}
+		"50004"
+		{
+			"name"					"hide_attrib_additive"										// Yes... It unfortunately only occurred to me to make this, -AFTER- I did everything else. I may be a bit stupid.
+			"attribute_class"		"DISPLAY_ONLY"												// These are only for backend purposes. You can replace them with any similar stock attribute of the same kind, doesn't matter.
+			"description_format"	"value_is_additive"
+			"hidden"				"1"
+		}
+		"50005"
+		{
+			"name"					"hide_attrib_percentage"
+			"attribute_class"		"DISPLAY_ONLY"
+			"description_format"	"value_is_percentage"
+			"hidden"				"1"
+		}
+		"50006"
+		{
+			"name"					"weapon fires baseballs"
+			"description_string"	"Fires high-speed baseballs"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+		}
+		"50007"
+		{
+			"name"					"rocket barrage"
+			"description_string"	"Unleash a barrage of %s1 rockets at once"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+		}
+		"50008"
+		{
+			"name"					"self mfd swing"
+			"description_string"	"On Swing: Mark yourself for Death! (%s1s)"
+			"description_format"	"value_is_additive"
+			"effect_type"			"negative"
+		}
+		"50009"
+		{
+			"name"					"weapon fires lasers"
+			"description_string"	"Fires high-speed lasers"
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
+		}
+		"50010"
+		{
+			"name"					"mod crit while airborne short"
+			"attribute_class"		"crit_while_airborne"
+			"description_string"	"Deals crits while blast or jumppad jumping"
+			"description_format"	"value_is_additive"											// Also might need to adjust "jumppad" to "jump pad", but that also feels really long-winded. Jumppad Jump. Jump Pad Jump...
+			"effect_type"			"positive"
+		}
+		"50011"
+		{
+			"name"					"damage at range increased"
+			"description_string"	"Long distance hits deal more damage"						// TO-DO: Maybe reword it as "...hits deal x% more damage"?
+			"description_format"	"value_is_additive"
+			"effect_type"			"positive"
 		}
 	}
 }
