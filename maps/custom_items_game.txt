@@ -2436,13 +2436,18 @@ It's illegal how good at mass-murder this is."
 			{
 				"rocket barrage"
 				{
-					"attribute_class"	"DISPLAY_ONLY"
+					"attribute_class"	"set_burstfire"
 					"value"				"3"
 				}
 				"voice pitch scale"
 				{
-					"attribute_class"	"mult_postfiredelay"
+					"attribute_class"	"mult_burstfiredelay"
 					"value"				"0.3"
+				}
+				"voice pitch scale"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.01"
 				}
 				"clip size penalty hidden"
 				{
@@ -2453,17 +2458,17 @@ It's illegal how good at mass-murder this is."
 				"hide_attrib_additive"															// Splicing 2.0! Also I'm not really sure if this is actually 3deg, but it feels right.
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"				"0.122173" 												// Made a little more extreme than what I think it "should" be (0.075) to offset the completely insane on-demand burst
+					"value"				"0.0523599" 												// Made a little more extreme than what I think it "should" be (0.075) to offset the completely insane on-demand burst
 				}
 				"projectile spread angle penalty"
 				{
 					"attribute_class"	"projectile_spread_angle"
-					"value"				"7"
+					"value"				"3"
 				}
 				"reload time increased"
 				{
 					"attribute_class"	"mult_reload_time"
-					"value"				"1.3"													// 1.3
+					"value"				"1.2"													// 1.3
 				}
 				"custom projectile model"
 				{
