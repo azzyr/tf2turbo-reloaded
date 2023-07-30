@@ -1390,10 +1390,15 @@
 					"attribute_class"	"mod_custom_falloff"
 					"value"				"0.75"
 				}
-				"modifier mini crit airborne direct hit only hidden"
+			//	"modifier mini crit airborne direct hit only hidden"
+			//	{
+			//		"attribute_class"	"mod_minicrit_airborne_direct_hit_only"
+			//		"value"				"1"
+			//	}
+				"voice pitch scale"
 				{
-					"attribute_class"	"mod_minicrit_airborne_direct_hit_only"
-					"value"				"1"
+					"attribute_class"	"mult_dmg"
+					"value"			"1.0909"
 				}
 			}
 			"visuals"
