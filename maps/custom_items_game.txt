@@ -1877,13 +1877,8 @@ Useful, for causing chaos within groups."
 				}
 				"damage penalty"
 				{
-					"attribute_class"	"VISUALONLY"
-					"value" 			"0.65"
-				}
-				"voice pitch scale"
-				{
 					"attribute_class"	"mult_dmg"
-					"value" 			"0.625"
+					"value" 			"0.85"
 				}
 				"clip size penalty"
 				{
